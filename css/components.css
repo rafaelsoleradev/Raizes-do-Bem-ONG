@@ -1,0 +1,86 @@
+/* css/components.css — botões, cards, formulários, badges, nav */
+
+/* ---------- Botões ---------- */
+.btn{
+  display:inline-block;
+  padding:0.7rem 1.2rem;
+  border-radius:10px;
+  font-weight:var(--fw-medium);
+  text-decoration:none;
+  transition:transform .18s ease, box-shadow .18s ease;
+  cursor:pointer;
+}
+.btn:focus{outline:2px solid color-mix(in srgb, var(--color-primary) 30%, transparent); outline-offset:3px}
+.btn.primary{background:var(--color-primary); color:#fff; border:1px solid var(--color-primary-dark)}
+.btn.primary:hover{transform:translateY(-3px); box-shadow:0 6px 18px rgba(60,141,96,0.12)}
+.btn.secondary{background:transparent; color:var(--neutral-900); border:1px solid #e7e7e7}
+.btn[disabled]{opacity:.5; cursor:not-allowed; transform:none}
+.hero-buttons {
+  margin-top: var(--s-3);
+  display: flex;
+  gap: var(--s-2);
+  justify-content: center;
+}
+
+.btn.primary {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary-dark);
+}
+
+.btn.secondary:hover {
+  background: var(--color-secondary);
+}
+
+/* ---------- Cards para projetos ---------- */
+.card{
+  background:var(--neutral-100);
+  border-radius:12px;
+  padding:var(--s-3);
+  box-shadow:0 6px 18px rgba(0,0,0,0.04);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.card:hover{transform:translateY(-6px); box-shadow:0 12px 30px rgba(0,0,0,0.06)}
+.card h3{color:var(--color-primary); margin-bottom:8px}
+.card p{color:var(--neutral-600); font-size:var(--fs-sm)}
+
+/* ---------- Formulário estilizado ---------- */
+.form-field{display:flex; flex-direction:column; gap:8px; margin-bottom:var(--s-2)}
+input[type="text"], input[type="email"], input[type="tel"], select, input[type="date"]{
+  padding:10px; border-radius:8px; border:1px solid #e8e8e8; background:var(--neutral-100);
+  font-size:var(--fs-md);
+}
+input:focus, select:focus{border-color:var(--color-primary); box-shadow:0 6px 14px rgba(60,141,96,0.06); outline:none}
+
+/* validação visual (quando js adicionar classe .invalid) */
+.invalid{border-color:#e05a4f; box-shadow:0 6px 14px rgba(224,90,79,0.06);}
+
+/* ---------- Badges / tags ---------- */
+.badge{display:inline-block; padding:4px 8px; border-radius:999px; font-size:0.8rem; background:var(--color-secondary); color:var(--neutral-900); margin-right:6px}
+
+/* ---------- Simple modal (hidden by default) ---------- */
+.modal-backdrop{position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.45); z-index:120}
+.modal{background:var(--neutral-100); padding:var(--s-3); border-radius:12px; width:min(680px,96%); box-shadow:0 20px 60px rgba(0,0,0,0.2)}
+.modal-backdrop.show{display:flex}
+
+/* ---------- Toast (positioned bottom-right) ---------- */
+.toast-wrap{position:fixed; right:16px; bottom:16px; z-index:130; display:flex; flex-direction:column; gap:10px}
+.toast{background:#111; color:#fff; padding:10px 14px; border-radius:8px; box-shadow:0 6px 20px rgba(0,0,0,0.2); opacity:0; transform:translateY(8px); transition:all .22s}
+.toast.show{opacity:1; transform:none}
+
+/* ---------- Nav: mobile hamburger (visually simple) ---------- */
+.hamburger{display:inline-flex; width:40px; height:40px; align-items:center; justify-content:center; border-radius:8px; cursor:pointer; border:1px solid transparent}
+.hamburger .bar{width:20px; height:2px; background:var(--neutral-900); border-radius:2px; position:relative}
+.hamburger .bar::before, .hamburger .bar::after{content:""; position:absolute; left:0; width:20px; height:2px; background:var(--neutral-900); border-radius:2px}
+.hamburger .bar::before{top:-6px} .hamburger .bar::after{top:6px}
+
+/* show/hide menu mobile (js toggles .open on .nav-mobile) */
+.nav-mobile{display:none}
+.nav-mobile.open{display:block; position:absolute; top:64px; left:0; right:0; background:var(--neutral-100); padding:var(--s-2); border-top:1px solid #eee}
+@media(min-width:768px){ .nav-mobile{display:none} .hamburger{display:none} }

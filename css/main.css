@@ -1,0 +1,5 @@
+@import "base.css";
+@import "layout.css";
+@import "components.css";
+/* pages.css pode ser adicionado se você quiser estilos específicos por página */
+/* css/main.css — importa todos os arquivos CSS necessários */
