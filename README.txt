@@ -16,7 +16,9 @@ O projeto tem como objetivo aplicar os fundamentos de **HTML5, CSS3 e JavaScript
 
 🌐 Publicação
 Após o envio para o GitHub Pages, o site ficará disponível em:
-👉 [https://SEUUSUARIO.github.io/Raizes-do-Bem](https://SEUUSUARIO.github.io/Raizes-do-Bem)
+👉 https://github.com/rafaelsoleradev/Raizes-do-Bem-ONG.git
+### 💚 Acesse o site
+👉 [Clique aqui para visitar o projeto] https://rafaelsoleradev.github.io/Raizes-do-Bem-ONG/
 
 ---
 
