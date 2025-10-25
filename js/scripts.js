@@ -123,6 +123,18 @@ if (hamburger && navMobile) {
     navMobile.classList.toggle("open");
   });
 }
+/* ================================
+   MODO ESCURO ACESSÍVEL
+================================ */
+
+const toggleContrast = document.createElement("button");
+toggleContrast.textContent = "🌓 Modo Escuro";
+toggleContrast.className = "contrast-toggle";
+document.body.appendChild(toggleContrast);
+
+toggleContrast.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
 
 /* ================================
    FIM DO SCRIPT

@@ -276,38 +276,19 @@ section p {
 @media (min-width:1600px){/* xxl */ }
 
 /* ================================
-   MODO ESCURO E ALTO CONTRASTE
+   ACESSIBILIDADE — LINK DE SALTO
 ================================ */
-.contrast-toggle {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background: #333;
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: #222;
   color: #fff;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 14px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s;
-  z-index: 10000;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: top 0.3s;
+  z-index: 1000;
 }
-
-.contrast-toggle:hover {
-  background: #444;
-}
-
-body.dark-mode {
-  background: #121212;
-  color: #f1f1f1;
-}
-
-.dark-mode header,
-.dark-mode footer {
-  background: #1e1e1e;
-}
-
-.dark-mode a {
-  color: #80cbc4;
+.skip-link:focus {
+  top: 10px;
 }
