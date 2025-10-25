@@ -274,3 +274,21 @@ section p {
 @media (min-width:1024px){/* lg */ }
 @media (min-width:1280px){/* xl */ }
 @media (min-width:1600px){/* xxl */ }
+
+/* ================================
+   ACESSIBILIDADE — LINK DE SALTO
+================================ */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: #222;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: top 0.3s;
+  z-index: 1000;
+}
+.skip-link:focus {
+  top: 10px;
+}
